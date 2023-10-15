@@ -318,11 +318,11 @@ export default function Fraud() {
                             cursor: 'pointer',
                             width: "45vw"
                         }}>
-                        This reporting channel is used to provide an opportunity to report your concerns related to suspected fraud or suspected violation of the Code of Conduct (COC) of Eventish.
+                        This reporting channel is used to provide an opportunity to report your concerns related to suspected fraud or suspected violation of the Code of Conduct (COC) of Homeatz.
                         <br />
                         <br /> Please note that you should not use this channel to report events / instances other than misconduct related to suspected fraud and suspected violation of COC.
                         <br />
-                        <br /> For any concern / complaint relating to your order, please reach out to our customer care team using the chat option.\n Eventish expects that reports made through this channel are made in good faith and are legitimate concerns that you believe should be investigated. All reports submitted will be given careful attention
+                        <br /> For any concern / complaint relating to your order, please reach out to our customer care team using the chat option.\n Homeatz expects that reports made through this channel are made in good faith and are legitimate concerns that you believe should be investigated. All reports submitted will be given careful attention
                     </p>
 
                     <button

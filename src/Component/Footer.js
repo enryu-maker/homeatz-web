@@ -25,16 +25,19 @@ export default function Footer() {
                 width: mobile ? "95vw" : '70vw',
                 height: 70,
             }}>
-                <p style={{
+                <Link 
+                to={'/'}
+                style={{
                     marginBlock: 0,
                     color: colors.iconColor,
                     fontSize: 25,
                     fontWeight: 'bold',
                     textAlign: 'center',
                     fontFamily: "LEMONMILK-Bold",
+                    textDecoration: 'none',
                 }}>
                     HOMEATZ.
-                </p>
+                </Link>
             </div>
             <div style={{
                 display: 'flex',
@@ -71,19 +74,6 @@ export default function Footer() {
                             textDecoration: 'none',
                         }}>
                         Who we are
-                    </Link>
-                    <Link
-                        to={"/carrers"}
-                        style={{
-                            marginBlock: 2,
-                            color: "GrayText",
-                            fontSize: 18,
-                            textAlign: 'center',
-                            fontFamily: "BalsamiqSans-Regular",
-                            textDecoration: 'none',
-
-                        }}>
-                        Work with us
                     </Link>
                     <Link
                         to={'/report-fraud'}

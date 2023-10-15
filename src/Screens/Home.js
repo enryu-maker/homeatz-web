@@ -92,8 +92,9 @@ export default function Home() {
               <img src={images.app}
                 alt="Group-1"
                 style={{
-                  width: "55%",
+                  width: "50%",
                   height: "50%",
+                  padding: 20,
                 }} />
             </LazyLoadComponent>
         }
