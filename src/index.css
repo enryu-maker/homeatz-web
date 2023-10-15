@@ -7,7 +7,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'BalsamiqSans-Regular';
+  src: local('BalsamiqSans'), url(./Assets/Fonts/BalsamiqSans-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'BalsamiqSans-Italic';
+  src: local('BalsamiqSans'), url(./Assets/Fonts/BalsamiqSans-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'BalsamiqSans-Bold';
+  src: local('BalsamiqSans'), url(./Assets/Fonts/BalsamiqSans-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'LEMONMILK-Medium';
+  src: local('LEMONMILK'), url(./Assets/Fonts/LEMONMILK-Medium.otf) format('truetype');
+}
+@font-face {
+  font-family: 'LEMONMILK-Bold';
+  src: local('LEMONMILK'), url(./Assets/Fonts/LEMONMILK-Bold.otf) format('truetype');
+}
+
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: monospace;
 }
