@@ -6,10 +6,11 @@ import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import { useForm, Controller } from 'react-hook-form';
 import Header from './Header'
+import useMediaQuery from '../Constants/useMediaQuery'
 
 export default function Fraud() {
     const { handleSubmit, control, formState: { errors }, } = useForm();
-
+    const mobile = useMediaQuery('(max-width: 768px)');
     React.useEffect(() => {
         window.scrollTo({
             top: 0,
@@ -43,6 +44,7 @@ export default function Fraud() {
             </div>
             <div style={{
                 display: "flex",
+                flexDirection: mobile?"column" : "row",
                 width: "90vw",
                 justifyContent: "space-evenly",
                 alignItems: "flex-start",
@@ -54,7 +56,7 @@ export default function Fraud() {
                     flexDirection: "column",
                     marginTop: 20,
                     height: "80vh",
-                    width: "50vw",
+                    width:mobile?"90vw" : "50vw",
                     justifyContent: "space-evenly",
                     alignItems: "flex-start"
                 }}>
@@ -73,8 +75,9 @@ export default function Fraud() {
                             <>
                                 <input
                                     style={{
-                                        height: 35,
-                                        width: "40vw",
+                                        height:mobile?50: 35,
+                                        marginBlock:mobile? 10 : 0,
+                                        width:mobile?"90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -114,8 +117,9 @@ export default function Fraud() {
                             <>
                                 <input
                                     style={{
-                                        height: 35,
-                                        width: "40vw",
+                                        height:mobile?50: 35,
+                                        marginBlock:mobile? 10 : 0,
+                                        width:mobile?"90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -156,8 +160,9 @@ export default function Fraud() {
                             <>
                                 <input
                                     style={{
-                                        height: 35,
-                                        width: "40vw",
+                                        height:mobile?50: 35,
+                                        marginBlock:mobile? 10 : 0,
+                                        width:mobile?"90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -197,8 +202,9 @@ export default function Fraud() {
                             <>
                                 <input
                                     style={{
-                                        height: 35,
-                                        width: "40vw",
+                                        height:mobile?50: 35,
+                                        marginBlock:mobile? 10 : 0,
+                                        width:mobile?"90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -239,8 +245,9 @@ export default function Fraud() {
                             <>
                                 <input
                                     style={{
-                                        height: 35,
-                                        width: "40vw",
+                                        height:mobile?50: 35,
+                                        marginBlock:mobile? 10 : 0,
+                                        width:mobile?"90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -281,8 +288,9 @@ export default function Fraud() {
                             <>
                                 <textarea
                                     style={{
-                                        height: 100,
-                                        width: "40vw",
+                                        height:mobile?150: 200,
+                                        marginBlock:mobile? 10 : 0,
+                                        width:mobile?"90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -310,13 +318,13 @@ export default function Fraud() {
                     <p
                         style={{
                             textDecoration: 'none',
-                            marginBlock: 0,
+                            marginBlock: 10,
                             color: colors.black,
                             fontSize: 12,
                             textAlign: 'left',
                             fontFamily: "BalsamiqSans-Italic",
                             cursor: 'pointer',
-                            width: "45vw"
+                            width:mobile?"90vw": "45vw"
                         }}>
                         This reporting channel is used to provide an opportunity to report your concerns related to suspected fraud or suspected violation of the Code of Conduct (COC) of Homeatz.
                         <br />
@@ -342,7 +350,7 @@ export default function Fraud() {
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    height: "50vh",
+                    height:mobile?"90vw":"50vh",
                     justifyContent: "space-evenly",
                     alignItems: "center"
                 }}>
@@ -352,7 +360,7 @@ export default function Fraud() {
                         boxShadow: "5px 5px 10px #88888850",
                         padding: 10,
                         borderRadius: 8,
-                        width: "25vw",
+                        width:mobile?"80vw": "25vw",
                         height: "18vh",
                         justifyContent: "space-evenly",
 

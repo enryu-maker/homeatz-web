@@ -27,7 +27,7 @@ export default function Home() {
             justifyContent: "center",
             alignItems: "center",
             // paddingHorizontal: 15,
-            width: "30%",
+            width:mobile?"90%": "30%",
           }}
         >
           <p

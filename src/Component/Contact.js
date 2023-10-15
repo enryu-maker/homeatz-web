@@ -6,8 +6,10 @@ import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import { useForm, Controller } from 'react-hook-form';
 import Header from './Header'
+import useMediaQuery from '../Constants/useMediaQuery'
 export default function Contact() {
     const { handleSubmit, control, formState: { errors }, } = useForm();
+    const mobile = useMediaQuery('(max-width: 768px)');
     React.useEffect(() => {
         window.scrollTo({
             top: 0,
@@ -30,6 +32,7 @@ export default function Contact() {
             /> */}
             <div style={{
                 display: "flex",
+                flexDirection:mobile?"column":"row",
                 width: "90vw",
                 justifyContent: "space-evenly",
                 alignItems: "center",
@@ -41,7 +44,7 @@ export default function Contact() {
                     flexDirection: "column",
                     marginTop: 20,
                     height: "50vh",
-                    width: "50vw",
+                    width:mobile?"90vw": "50vw",
                     justifyContent: "space-evenly",
                     alignItems: "flex-start"
                 }}>
@@ -61,7 +64,7 @@ export default function Contact() {
                                 <input
                                     style={{
                                         height: 35,
-                                        width: "40vw",
+                                        width:mobile?"90%": "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -101,7 +104,7 @@ export default function Contact() {
                                 <input
                                     style={{
                                         height: 35,
-                                        width: "40vw",
+                                        width:mobile?"90%": "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -141,7 +144,7 @@ export default function Contact() {
                                 <input
                                     style={{
                                         height: 35,
-                                        width: "40vw",
+                                        width:mobile?"90%": "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -180,8 +183,9 @@ export default function Contact() {
                             <>
                                 <textarea
                                     style={{
-                                        height: 100,
-                                        width: "40vw",
+                                        height:mobile?80: 100,
+                                        marginBlock:mobile? 10 : 0,
+                                        width:mobile?"90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -222,7 +226,7 @@ export default function Contact() {
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    height: "50vh",
+                    height:"50vh",
                     justifyContent: "space-evenly",
                     alignItems: "center"
                 }}>
@@ -232,7 +236,7 @@ export default function Contact() {
                         boxShadow: "5px 5px 10px #88888850",
                         padding: 10,
                         borderRadius: 8,
-                        width: "25vw",
+                        width:mobile?"90vw": "25vw",
                         height: "18vh",
                         justifyContent: "space-evenly",
                     }}>
