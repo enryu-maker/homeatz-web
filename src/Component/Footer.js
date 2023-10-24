@@ -1,6 +1,7 @@
 import React from 'react'
 import { colors } from '../Assets/theme'
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 import { images } from '../Assets/image'
 import { LazyLoadComponent } from 'react-lazy-load-image-component'
 import { Link } from 'react-router-dom'
@@ -139,6 +140,30 @@ export default function Footer() {
                         }}>
                         Privacy Policy
                     </Link>
+                    <Link
+                        to={"/refund"}
+                        style={{
+                            marginBlock: 2,
+                            color: "GrayText",
+                            fontSize: 18,
+                            textAlign: 'center',
+                            fontFamily: "BalsamiqSans-Regular",
+                            textDecoration: 'none',
+                        }}>
+                        Refund & Cancellation Policy
+                    </Link>
+                    <Link
+                        to={"/shipping"}
+                        style={{
+                            marginBlock: 2,
+                            color: "GrayText",
+                            fontSize: 18,
+                            textAlign: 'center',
+                            fontFamily: "BalsamiqSans-Regular",
+                            textDecoration: 'none',
+                        }}>
+                        Shipping and Delivery policy
+                    </Link>
                 </div>
                 <div style={{
                     display: 'flex',
@@ -163,10 +188,30 @@ export default function Footer() {
                         alignItems: 'center',
                         width: '100%',
                     }}>
-                        <FaFacebook size={20} color={colors.darkGrey} />
-                        <FaInstagram size={20} color={colors.darkGrey} />
-                        <FaTwitter size={20} color={colors.darkGrey} />
-                        <FaLinkedin size={20} color={colors.darkGrey} />
+                        <FaFacebook 
+                        style={{
+                            cursor: 'pointer',
+                        }}
+                        onClick={() => window.open('https://www.facebook.com/homeatz', '_blank')}
+                        size={20} color={colors.darkGrey} />
+                        <FaInstagram
+                        style={{
+                            cursor: 'pointer',
+                        }}
+                        onClick={() => window.open('https://www.instagram.com/homeatz/', '_blank')}
+                        size={20} color={colors.darkGrey} />
+                        <FaXTwitter
+                        style={{
+                            cursor: 'pointer',
+                        }}
+                        onClick={() => window.open('https://twitter.com/homeatzindia', '_blank')}
+                         size={20} color={colors.darkGrey} />
+                        <FaLinkedin
+                        style={{
+                            cursor: 'pointer',
+                        }}
+                        onClick={() => window.open('https://www.linkedin.com/company/homeatzofficial/', '_blank')}
+                        size={20} color={colors.darkGrey} />
                     </div>
                 </div>
                 <div style={{

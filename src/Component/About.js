@@ -6,6 +6,7 @@ import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import { useForm, Controller } from 'react-hook-form';
 import Header from './Header'
+import { Helmet } from "react-helmet";
 export default function About() {
     const data = [
         {
@@ -58,8 +59,8 @@ You can always get in touch with us! Checkout the ‘Contact us’ section in th
             `
         },
         {
-            question:"PLACING AN ORDER",
-            answer:`
+            question: "PLACING AN ORDER",
+            answer: `
             1.	When do I have to place my order?
 You can order BY 9pm for next day lunch and dinner.
 
@@ -101,6 +102,11 @@ We accept all major credit cards. If you have any issues with completing your tr
             flexDirection: 'column',
             justifyContent: 'center',
         }}>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>About Homeatz - Your Culinary Connection to Local Home Chefs</title>
+                <meta name="description" content="Learn more about Homeatz, our mission, and the people behind the platform. Discover how we're redefining the way you experience homemade cuisine in your neighborhood." />
+            </Helmet>
             <Header />
             <div style={{
                 display: "flex",

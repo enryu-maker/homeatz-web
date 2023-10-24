@@ -1,14 +1,20 @@
-import React  from 'react'
+import React from 'react'
 import { LazyLoadComponent } from 'react-lazy-load-image-component'
 import useMediaQuery from '../Constants/useMediaQuery'
 import { images } from '../Assets/image';
 import { colors } from '../Assets/theme';
 import Footer from '../Component/Footer';
+import { Helmet } from "react-helmet";
 export default function Home() {
   const mobile = useMediaQuery('(max-width: 768px)');
-  
+
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Welcome to Homeatz - Where Home Chefs Delight Your Palate</title>
+        <meta name="description" content="Discover a world of homemade culinary delights at Homeatz. Connect with talented home chefs, explore a variety of cuisines, and savor the flavors of your local community. Order now!" />
+      </Helmet>
       <div style={{
         display: "flex",
         backgroundColor: "black",
@@ -27,7 +33,7 @@ export default function Home() {
             justifyContent: "center",
             alignItems: "center",
             // paddingHorizontal: 15,
-            width:mobile?"90%": "30%",
+            width: mobile ? "90%" : "30%",
           }}
         >
           <p
@@ -75,17 +81,17 @@ export default function Home() {
           Download the app now!
         </button>
       </div>
-      <div 
-      id={"section1"}
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-        width: "100%",
-        alignSelf: "center",
-        backgroundColor: colors.white,
-      }}>
+      <div
+        id={"section1"}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          width: "100%",
+          alignSelf: "center",
+          backgroundColor: colors.white,
+        }}>
         {
           mobile ? null :
             <LazyLoadComponent>
@@ -267,7 +273,7 @@ export default function Home() {
           </LazyLoadComponent>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   )
 }

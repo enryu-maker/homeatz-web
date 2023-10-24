@@ -2,7 +2,7 @@ import React from 'react'
 import { colors } from '../Assets/theme'
 import Header from './Header'
 import Footer from './Footer'
-
+import { Helmet } from 'react-helmet'
 export default function Privacy() {
     const data = [
         {
@@ -104,6 +104,11 @@ Marketing. We may use your Personal Data to contact you to tell you about produc
             flexDirection: 'column',
             justifyContent: 'center',
         }}>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Homeatz Privacy Policy</title>
+                <meta name="description" content="At Homeatz, we value your privacy. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our platform." />
+            </Helmet>
             <Header/>
             <div style={{
                 display: "flex",

@@ -2,7 +2,7 @@ import React from 'react'
 import { colors } from '../Assets/theme'
 import Footer from './Footer'
 import Header from './Header'
-
+import { Helmet } from "react-helmet";
 export default function Terms() {
     const data = [
         {
@@ -232,6 +232,11 @@ These Terms of Service govern your use of the Service, superseding any prior agr
             flexDirection: 'column',
             justifyContent: 'center',
         }}>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Homeatz Terms and Conditions</title>
+                <meta name="description" content=" Please read and understand our terms and conditions before using Homeatz. By using our platform, you agree to abide by these terms." />
+            </Helmet>
             <Header />
             <div style={{
                 display: "flex",

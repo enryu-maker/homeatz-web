@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { useForm, Controller } from 'react-hook-form';
 import Header from './Header'
 import useMediaQuery from '../Constants/useMediaQuery'
+import { Helmet } from 'react-helmet'
 export default function Contact() {
     const { handleSubmit, control, formState: { errors }, } = useForm();
     const mobile = useMediaQuery('(max-width: 768px)');
@@ -22,6 +23,11 @@ export default function Contact() {
             flexDirection: 'column',
             justifyContent: 'center',
         }}>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Contact Homeatz</title>
+                <meta name="description" content="Have questions, feedback, or need assistance? Contact Homeatz. We're here to help you." />
+            </Helmet>
             <Header/>
             {/* <img
                 src={images.contact}

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { useForm, Controller } from 'react-hook-form';
 import Header from './Header'
 import useMediaQuery from '../Constants/useMediaQuery'
+import { Helmet } from "react-helmet";
 
 export default function Fraud() {
     const { handleSubmit, control, formState: { errors }, } = useForm();
@@ -23,6 +24,11 @@ export default function Fraud() {
             flexDirection: 'column',
             justifyContent: 'center',
         }}>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Report an Issue or Provide Feedback</title>
+                <meta name="description" content="Help us improve your experience on Homeatz by reporting issues or sharing your valuable feedback. Your input is important to us." />
+            </Helmet>
             <Header/>
             <div style={{
                 display: "flex",
