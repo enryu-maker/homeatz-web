@@ -48,13 +48,14 @@ export default function Footer() {
                 width: mobile ? "95vw" : '70vw',
                 flexWrap:"wrap",
                 height:mobile? "50vh":"auto",
+                paddingBlockEnd: 20,
             }}>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'flex-start',
-                    padding:mobile?0 : 20,
+                    // padding:mobile?0 : 20,
                 }}>
                     <p style={{
                         color: colors.darkGrey,
@@ -106,7 +107,6 @@ export default function Footer() {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'flex-start',
-                    padding:mobile?0 : 20,
                 }}>
                     <p style={{
                         color: colors.darkGrey,
@@ -170,8 +170,6 @@ export default function Footer() {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'flex-start',
-                    paddingBlock:mobile?20 : 0,
-                    padding:mobile?0:20,
                 }}>
                     <p style={{
                         color: colors.darkGrey,
@@ -179,7 +177,7 @@ export default function Footer() {
                         textAlign: 'center',
                         fontFamily: "LEMONMILK-Bold",
                     }}>
-                        Social Links
+                        Social
                     </p>
                     <div style={{
                         display: 'flex',
@@ -219,7 +217,6 @@ export default function Footer() {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'flex-start',
-                    padding:mobile?0 : 20,
                 }}>
                     <p style={{
                         color: colors.darkGrey,
@@ -227,7 +224,7 @@ export default function Footer() {
                         textAlign: 'center',
                         fontFamily: "LEMONMILK-Bold",
                     }}>
-                        Download Links
+                       Download
                     </p>
                     <LazyLoadComponent>
                         <div style={{
@@ -242,8 +239,8 @@ export default function Footer() {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 backgroundColor: "ButtonText",
+                                paddingInline: 7,
                                 height: 40,
-                                paddingInline: 10,
                                 borderRadius: 8,
                                 marginBlockEnd: 10,
                                 // width: 100
@@ -284,7 +281,7 @@ export default function Footer() {
                                 alignItems: 'center',
                                 backgroundColor: "ButtonText",
                                 height: 40,
-                                paddingInline: 10,
+                                paddingInline: 7,
                                 borderRadius: 8,
                                 // width: 100
                             }}>
@@ -335,6 +332,15 @@ export default function Footer() {
             }}>
                 By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2023 © HOMEATZ Ltd. All rights reserved.
             </p>
+            <img
+                onClick={() => window.open('https://nerdtech.in/', '_blank')}
+                src={images.NT}
+                alt="NT"
+                style={{
+                    width:mobile?"100vw":"50vw",
+                    cursor: 'pointer',
+                }}
+                />
         </div>
     )
 }

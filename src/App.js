@@ -32,7 +32,7 @@ export default function App() {
         ariaLabel="blocks-loading"
         wrapperStyle={{}}
         wrapperClass="blocks-wrapper"
-        colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+        colors={['#bc3061', '#f7e1e1', '#E53988','#393937','#f5f5f5']}
       />
     </div>
   )

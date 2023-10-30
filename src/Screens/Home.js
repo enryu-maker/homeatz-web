@@ -10,11 +10,11 @@ export default function Home() {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <meta charSet="utf-8" />
         <title>Welcome to Homeatz - Where Home Chefs Delight Your Palate</title>
         <meta name="description" content="Discover a world of homemade culinary delights at Homeatz. Connect with talented home chefs, explore a variety of cuisines, and savor the flavors of your local community. Order now!" />
-      </Helmet>
+      </Helmet> */}
       <div style={{
         display: "flex",
         backgroundColor: "black",
@@ -29,7 +29,7 @@ export default function Home() {
             backgroundColor: "#BD1461",
             borderTopLeftRadius: 40,
             borderBottomRightRadius: 40,
-            height: "15vh",
+            height: mobile?"14vh":"15vh",
             justifyContent: "center",
             alignItems: "center",
             // paddingHorizontal: 15,
@@ -39,7 +39,7 @@ export default function Home() {
           <p
             style={{
               color: "#fff",
-              fontSize: 65, // 4.4 equivalent to 32
+              fontSize:mobile?50 : 65, // 4.4 equivalent to 32
               textAlign: "center",
               fontFamily: "LEMONMILK-MEDIUM",
               letterSpacing: 1,
@@ -74,7 +74,7 @@ export default function Home() {
             textAlign: "center",
             fontFamily: "BalsamiqSans-Bold",
             color: "#CBB26A",
-            paddingBlock: 20,
+            paddingBlock:20,
             cursor: "pointer",
           }}
         >
@@ -111,6 +111,7 @@ export default function Home() {
           alignItems: mobile ? "center" : "flex-start",
           width: mobile ? "100%" : "45%",
           height: "40vh",
+          paddingBlock:mobile?40 : 0,
         }}>
           <p style={{
             marginBlock: 0,
