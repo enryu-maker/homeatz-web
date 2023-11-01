@@ -10,11 +10,11 @@ export default function Home() {
 
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <meta charSet="utf-8" />
         <title>Welcome to Homeatz - Where Home Chefs Delight Your Palate</title>
         <meta name="description" content="Discover a world of homemade culinary delights at Homeatz. Connect with talented home chefs, explore a variety of cuisines, and savor the flavors of your local community. Order now!" />
-      </Helmet> */}
+      </Helmet>
       <div style={{
         display: "flex",
         backgroundColor: "black",

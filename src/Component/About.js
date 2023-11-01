@@ -87,6 +87,25 @@ At this time, we are unable to relay individual customization requests to our ch
 8.	What types of payments do you accept?
 We accept all major credit cards. If you have any issues with completing your transaction, please send us a message via the ‘Contact us’ section in the side menu of the app and we'll happily assist you!
 `
+        },
+        {
+            question: "Visions and Missions",
+            answer: `
+            Homeatz Global wishes to provide a market place to online sale, whatever best they can cook at home. All the dishes offered by Home Chefs shall be visible to home food lovers (consumers) located at 5km distance of that area or pincode zone, rest shall remain hidden. Beauty of this app is it’s causing state of art latest technology and opportunity to Home Chefs to start with single dish, that they can organically cook to build trust and brand name of their own. Home Chefs are requested to login with brand name, instead of individual name, so that if they are shy of disclosing their identity or for any reasons consumers should not know who is cooking, from which location remain hidden, so that there privacy is not breached.
+            `
+        },
+        {
+            question: "",
+            answer: `
+            HOMEATZ GLOBAL is an IIT’ian brain child. Er. Sudhir Kumar BE & ME IIT, LM_CSI, LM_IRC, LM_IBC, former HOD & Chief Engineer is the owner and founding Director of VXEQ INFRA FACILITIES Pvt Ltd,India and HOMEATZ PTE Ltd, Singapore with 100% share holdings of HOMEATZ  PTE LTD,  and has transfered HOMEATZ rights to VXEQ INFRA FACILITIES PVT LTD for publishing HOMEATZ GLOBAL version of app on both apple and google play store. Both the Directors 
+(Sudhir Kumar and Saurabh Sinha) of VXEQ INFRA FACILITIES PVT LTD, Ghaziabad, U.P., INDIA are fully authorized to sign any agreement related to HOMEATZ. 
+Mr Akif Khan CEO of M/S NERDTECH (nerdtech.in, +91 9405649047, contact@nerdtech.in) has been authorized to make necessary upgrades in existing codes and upload fresh and future version of HOMEATZ. Country Head and Team Leaders appointed by VXEQ INFRA FACILITIES LTD, shall be responsible for local rules and regulations, payment gateways etc.
+HOMEATZ GLOBAL app shall be released in various play store, in three phases as under. 
+1- Home Chef shall deliver and collect payment.
+2 - Customers shall pick and get a gift in return from HomeChefs.
+3- Auto mode advance payment and delivery by professional track able .HOMEATZ app.
+HOMEATZ.IN is the website HOMEATZ GLOBAL, homeatz.in@gmail.com, +91 9457030089, 6395712982 shall be officially used for HOMEATZ GLOBAL app.
+            `
         }
     ]
     const { handleSubmit, control, formState: { errors }, } = useForm();

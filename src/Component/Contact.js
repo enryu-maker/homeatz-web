@@ -29,13 +29,24 @@ export default function Contact() {
                 <meta name="description" content="Have questions, feedback, or need assistance? Contact Homeatz. We're here to help you." />
             </Helmet>
             <Header/>
-            {/* <img
-                src={images.contact}
-                style={{
-                    height:250,
-                    width:"100vw"
-                }}
-            /> */}
+            <div style={{
+                display: "flex",
+                backgroundColor: colors.lightPink,
+                width: "100vw",
+                height: 250,
+                justifyContent: "center",
+                alignItems: "center"
+            }}>
+                <p style={{
+                    marginBlock: 0,
+                    color: colors.logoPink,
+                    fontSize: 40,
+                    textAlign: 'center',
+                    fontFamily: "BalsamiqSans-Bold",
+                }}>
+                    Contact Us
+                </p>
+            </div>
             <div style={{
                 display: "flex",
                 flexDirection:mobile?"column":"row",

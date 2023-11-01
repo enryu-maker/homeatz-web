@@ -61,7 +61,7 @@ export default function Fraud() {
                     display: "flex",
                     flexDirection: "column",
                     marginTop: 20,
-                    height: "80vh",
+                    height: "100vh",
                     width:mobile?"90vw" : "50vw",
                     justifyContent: "space-evenly",
                     alignItems: "flex-start"
