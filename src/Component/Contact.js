@@ -1,9 +1,7 @@
 import React from 'react'
 import { colors } from '../Assets/theme'
-import { LazyLoadComponent } from 'react-lazy-load-image-component'
-import { images } from '../Assets/image'
 import Footer from './Footer'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
 import { useForm, Controller } from 'react-hook-form';
 import Header from './Header'
 import useMediaQuery from '../Constants/useMediaQuery'
@@ -11,12 +9,37 @@ import { Helmet } from 'react-helmet'
 export default function Contact() {
     const { handleSubmit, control, formState: { errors }, } = useForm();
     const mobile = useMediaQuery('(max-width: 768px)');
+    const [loading, setLoading] = React.useState(false)
     React.useEffect(() => {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         })
     }, [])
+
+    async function SubmitForm() {
+        setLoading(true)
+        await handleSubmit((data) => {
+             axios.post('https://api-nerdtech.homeatz.in/submitfeedback/', {
+                name: data.name,
+                email: data.email,
+                phone: data.phone,
+                feedback: data.feedback
+            })
+                .then(function (response) {
+                    console.log(response);
+                    alert("Feedback Submitted Successfully")
+                    setLoading(false)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                    alert("Feedback Submission Failed")
+                    setLoading(false)
+                });
+        }
+        )();
+    }
+
     return (
         <div style={{
             display: 'flex',
@@ -87,13 +110,12 @@ export default function Contact() {
                                         fontFamily: "BalsamiqSans-Regular",
                                         fontSize: 18,
                                         paddingInline: 10,
-                                        color: "lightgray"
+                                        color: "darkgray"
                                     }}
+                                    type='text'
                                     placeholder='Full Name*'
-                                    // value={passwordText}
-                                    onChangeText={(text) => {
-                                        onChange(text);
-                                    }}
+                                    value={value}
+                                    onChange={onChange}
                                 />
                                 {errors?.name && (
                                     <p style={{
@@ -127,13 +149,11 @@ export default function Contact() {
                                         fontFamily: "BalsamiqSans-Regular",
                                         fontSize: 18,
                                         paddingInline: 10,
-                                        color: "lightgray"
+                                        color: "darkgray"
                                     }}
                                     placeholder='Email Address*'
-                                    // value={passwordText}
-                                    onChangeText={(text) => {
-                                        onChange(text);
-                                    }}
+                                    value={value}
+                                    onChange={onChange}
                                 />
                                 {errors?.email && (
                                     <p style={{
@@ -146,7 +166,7 @@ export default function Contact() {
                         )}
                     />
                     <Controller
-                        name='mobile'
+                        name='phone'
                         control={control}
                         defaultValue=''
                         rules={{
@@ -167,26 +187,24 @@ export default function Contact() {
                                         fontFamily: "BalsamiqSans-Regular",
                                         fontSize: 18,
                                         paddingInline: 10,
-                                        color: "lightgray"
+                                        color: "darkgray"
                                     }}
                                     placeholder='Mobile*'
-                                    // value={passwordText}
-                                    onChangeText={(text) => {
-                                        onChange(text);
-                                    }}
+                                    value={value}
+                                    onChange={onChange}
                                 />
-                                {errors?.mobile && (
+                                {errors?.phone && (
                                     <p style={{
 
                                     }}>
-                                        {errors?.mobile?.message}
+                                        {errors?.phone?.message}
                                     </p>
                                 )}
                             </>
                         )}
                     />
                     <Controller
-                        name='message'
+                        name='feedback'
                         control={control}
                         defaultValue=''
                         rules={{
@@ -208,25 +226,24 @@ export default function Contact() {
                                         fontFamily: "BalsamiqSans-Regular",
                                         fontSize: 18,
                                         padding: 10,
-                                        color: "lightgray"
+                                        color: "darkgray"
                                     }}
                                     placeholder='Type Text*'
-                                    // value={passwordText}
-                                    onChangeText={(text) => {
-                                        onChange(text);
-                                    }}
+                                    value={value}
+                                    onChange={onChange}
                                 />
-                                {errors?.message && (
+                                {errors?.feedback && (
                                     <p style={{
 
                                     }}>
-                                        {errors?.message?.message}
+                                        {errors?.feedback?.message}
                                     </p>
                                 )}
                             </>
                         )}
                     />
                     <button
+                        onClick={() => SubmitForm()}
                         style={{
                             border: "none",
                             backgroundColor: colors.iconColor,

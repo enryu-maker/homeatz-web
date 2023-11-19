@@ -1,23 +1,46 @@
 import React from 'react'
 import { colors } from '../Assets/theme'
-import { LazyLoadComponent } from 'react-lazy-load-image-component'
-import { images } from '../Assets/image'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import { useForm, Controller } from 'react-hook-form';
 import Header from './Header'
 import useMediaQuery from '../Constants/useMediaQuery'
 import { Helmet } from "react-helmet";
-
+import axios from 'axios'
 export default function Fraud() {
     const { handleSubmit, control, formState: { errors }, } = useForm();
     const mobile = useMediaQuery('(max-width: 768px)');
+    const [loading, setLoading] = React.useState(false)
     React.useEffect(() => {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         })
     }, [])
+    async function SubmitForm() {
+        setLoading(true)
+        await handleSubmit((data) => {
+            axios.post('https://api-nerdtech.homeatz.in/submitgreivance/', {
+                name: data.name,
+                email: data.email,
+                phone: data.phone,
+                against: data.against,
+                city: data.city,
+                greivance: data.greivance,
+            })
+                .then(function (response) {
+                    console.log(response);
+                    alert("Feedback Submitted Successfully")
+                    setLoading(false)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                    alert("Feedback Submission Failed")
+                    setLoading(false)
+                });
+        }
+        )();
+    }
     return (
         <div style={{
             display: 'flex',
@@ -29,7 +52,7 @@ export default function Fraud() {
                 <title>Report an Issue or Provide Feedback</title>
                 <meta name="description" content="Help us improve your experience on Homeatz by reporting issues or sharing your valuable feedback. Your input is important to us." />
             </Helmet>
-            <Header/>
+            <Header />
             <div style={{
                 display: "flex",
                 backgroundColor: colors.lightPink,
@@ -50,7 +73,7 @@ export default function Fraud() {
             </div>
             <div style={{
                 display: "flex",
-                flexDirection: mobile?"column" : "row",
+                flexDirection: mobile ? "column" : "row",
                 width: "90vw",
                 justifyContent: "space-evenly",
                 alignItems: "flex-start",
@@ -62,7 +85,7 @@ export default function Fraud() {
                     flexDirection: "column",
                     marginTop: 20,
                     height: "100vh",
-                    width:mobile?"90vw" : "50vw",
+                    width: mobile ? "90vw" : "50vw",
                     justifyContent: "space-evenly",
                     alignItems: "flex-start"
                 }}>
@@ -81,22 +104,20 @@ export default function Fraud() {
                             <>
                                 <input
                                     style={{
-                                        height:mobile?50: 35,
-                                        marginBlock:mobile? 10 : 0,
-                                        width:mobile?"90%" : "40vw",
+                                        height: mobile ? 50 : 35,
+                                        marginBlock: mobile ? 10 : 0,
+                                        width: mobile ? "90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
                                         fontSize: 18,
                                         paddingInline: 10,
                                         color: colors.darkGrey,
-                                        outline:"none"
+                                        outline: "none"
                                     }}
                                     placeholder='Your Name*'
-                                    // value={passwordText}
-                                    onChangeText={(text) => {
-                                        onChange(text);
-                                    }}
+                                    value={value}
+                                    onChange={onChange}
                                 />
                                 {errors?.name && (
                                     <p style={{
@@ -123,23 +144,21 @@ export default function Fraud() {
                             <>
                                 <input
                                     style={{
-                                        height:mobile?50: 35,
-                                        marginBlock:mobile? 10 : 0,
-                                        width:mobile?"90%" : "40vw",
+                                        height: mobile ? 50 : 35,
+                                        marginBlock: mobile ? 10 : 0,
+                                        width: mobile ? "90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
                                         fontSize: 18,
                                         paddingInline: 10,
                                         color: colors.darkGrey,
-                                        outline:"none"
+                                        outline: "none"
 
                                     }}
                                     placeholder='Your Email Address*'
-                                    // value={passwordText}
-                                    onChangeText={(text) => {
-                                        onChange(text);
-                                    }}
+                                    value={value}
+                                    onChange={onChange}
                                 />
                                 {errors?.email && (
                                     <p style={{
@@ -152,7 +171,7 @@ export default function Fraud() {
                         )}
                     />
                     <Controller
-                        name='mobile'
+                        name='phone'
                         control={control}
                         defaultValue=''
                         rules={{
@@ -166,71 +185,67 @@ export default function Fraud() {
                             <>
                                 <input
                                     style={{
-                                        height:mobile?50: 35,
-                                        marginBlock:mobile? 10 : 0,
-                                        width:mobile?"90%" : "40vw",
+                                        height: mobile ? 50 : 35,
+                                        marginBlock: mobile ? 10 : 0,
+                                        width: mobile ? "90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
                                         fontSize: 18,
                                         paddingInline: 10,
                                         color: colors.darkGrey,
-                                        outline:"none"
+                                        outline: "none"
                                     }}
                                     placeholder='Your Mobile*'
-                                    // value={passwordText}
-                                    onChangeText={(text) => {
-                                        onChange(text);
-                                    }}
+                                    value={value}
+                                    onChange={onChange}
                                 />
-                                {errors?.mobile && (
+                                {errors?.phone && (
                                     <p style={{
 
                                     }}>
-                                        {errors?.mobile?.message}
+                                        {errors?.phone?.message}
                                     </p>
                                 )}
                             </>
                         )}
                     />
                     <Controller
-                        name='person'
+                        name='against'
                         control={control}
                         defaultValue=''
                         rules={{
                             required: {
                                 value: true,
                                 message:
-                                    'Mobile Cannot be Empty',
+                                    'Person / Organization Cannot be Empty',
                             },
                         }}
                         render={({ field: { onChange, value } }) => (
                             <>
                                 <input
                                     style={{
-                                        height:mobile?50: 35,
-                                        marginBlock:mobile? 10 : 0,
-                                        width:mobile?"90%" : "40vw",
+                                        height: mobile ? 50 : 35,
+                                        marginBlock: mobile ? 10 : 0,
+                                        width: mobile ? "90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
                                         fontSize: 18,
                                         paddingInline: 10,
                                         color: colors.darkGrey,
-                                        outline:"none"
+                                        outline: "none"
 
                                     }}
                                     placeholder='Name of person / Organization against whome concern is made*'
-                                    // value={passwordText}
-                                    onChangeText={(text) => {
-                                        onChange(text);
-                                    }}
+                                    value={value}
+                                    onChange={onChange}
                                 />
-                                {errors?.mobile && (
+                                {errors?.against && (
                                     <p style={{
 
                                     }}>
-                                        {errors?.mobile?.message}
+                                        {errors?.against?.message}
                                     </p>
                                 )}
                             </>
@@ -244,30 +259,28 @@ export default function Fraud() {
                             required: {
                                 value: true,
                                 message:
-                                    'Mobile Cannot be Empty',
+                                    'City Cannot be Empty',
                             },
                         }}
                         render={({ field: { onChange, value } }) => (
                             <>
                                 <input
                                     style={{
-                                        height:mobile?50: 35,
-                                        marginBlock:mobile? 10 : 0,
-                                        width:mobile?"90%" : "40vw",
+                                        height: mobile ? 50 : 35,
+                                        marginBlock: mobile ? 10 : 0,
+                                        width: mobile ? "90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
                                         fontSize: 18,
                                         paddingInline: 10,
                                         color: colors.darkGrey,
-                                        outline:"none"
+                                        outline: "none"
 
                                     }}
                                     placeholder='City*'
-                                    // value={passwordText}
-                                    onChangeText={(text) => {
-                                        onChange(text);
-                                    }}
+                                    value={value}
+                                    onChange={onChange}
                                 />
                                 {errors?.city && (
                                     <p style={{
@@ -280,42 +293,40 @@ export default function Fraud() {
                         )}
                     />
                     <Controller
-                        name='message'
+                        name='greivance'
                         control={control}
                         defaultValue=''
                         rules={{
                             required: {
                                 value: true,
                                 message:
-                                    'Mobile Cannot be Empty',
+                                    'Greivance Cannot be Empty',
                             },
                         }}
                         render={({ field: { onChange, value } }) => (
                             <>
                                 <textarea
                                     style={{
-                                        height:mobile?150: 200,
-                                        marginBlock:mobile? 10 : 0,
-                                        width:mobile?"90%" : "40vw",
+                                        height: mobile ? 150 : 200,
+                                        marginBlock: mobile ? 10 : 0,
+                                        width: mobile ? "90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
                                         fontSize: 18,
                                         padding: 10,
                                         color: colors.darkGrey,
-                                        outline:"none"
+                                        outline: "none"
                                     }}
                                     placeholder='Type Text*'
-                                    // value={passwordText}
-                                    onChangeText={(text) => {
-                                        onChange(text);
-                                    }}
+                                    value={value}
+                                    onChange={onChange}
                                 />
-                                {errors?.message && (
+                                {errors?.greivance && (
                                     <p style={{
 
                                     }}>
-                                        {errors?.message?.message}
+                                        {errors?.greivance?.message}
                                     </p>
                                 )}
                             </>
@@ -330,7 +341,7 @@ export default function Fraud() {
                             textAlign: 'left',
                             fontFamily: "BalsamiqSans-Italic",
                             cursor: 'pointer',
-                            width:mobile?"90vw": "45vw"
+                            width: mobile ? "90vw" : "45vw"
                         }}>
                         This reporting channel is used to provide an opportunity to report your concerns related to suspected fraud or suspected violation of the Code of Conduct (COC) of Homeatz.
                         <br />
@@ -340,6 +351,7 @@ export default function Fraud() {
                     </p>
 
                     <button
+                        onClick={() => SubmitForm()}
                         style={{
                             border: "none",
                             backgroundColor: colors.logoPink,
@@ -356,7 +368,7 @@ export default function Fraud() {
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    height:mobile?"90vw":"50vh",
+                    height: mobile ? "90vw" : "50vh",
                     justifyContent: "space-evenly",
                     alignItems: "center"
                 }}>
@@ -366,7 +378,7 @@ export default function Fraud() {
                         boxShadow: "5px 5px 10px #88888850",
                         padding: 10,
                         borderRadius: 8,
-                        width:mobile?"80vw": "25vw",
+                        width: mobile ? "80vw" : "25vw",
                         height: "18vh",
                         justifyContent: "space-evenly",
 
@@ -405,7 +417,6 @@ export default function Fraud() {
                                     fontFamily: "BalsamiqSans-Regular",
                                     cursor: 'pointer',
                                 }}> contact us here. </Link>
-
                         </p>
                     </div>
                 </div>
