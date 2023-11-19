@@ -7,6 +7,7 @@ import Header from './Header'
 import useMediaQuery from '../Constants/useMediaQuery'
 import { Helmet } from "react-helmet";
 import axios from 'axios'
+import { TailSpin } from 'react-loader-spinner';
 export default function Fraud() {
     const { handleSubmit, control, formState: { errors }, } = useForm();
     const mobile = useMediaQuery('(max-width: 768px)');
@@ -349,21 +350,31 @@ export default function Fraud() {
                         <br />
                         <br /> For any concern / complaint relating to your order, please reach out to our customer care team using the chat option.\n Homeatz expects that reports made through this channel are made in good faith and are legitimate concerns that you believe should be investigated. All reports submitted will be given careful attention
                     </p>
-
-                    <button
-                        onClick={() => SubmitForm()}
-                        style={{
-                            border: "none",
-                            backgroundColor: colors.logoPink,
-                            padding: 10,
-                            fontFamily: "BalsamiqSans-Regular",
-                            fontSize: 18,
-                            color: colors.white,
-                            width: 200,
-                            borderRadius: 8
-                        }}>
-                        Submit
-                    </button>
+                    {
+                        loading ?
+                            <TailSpin
+                                color={colors.logoPink}
+                                height={50}
+                                width={50}
+                                style={{
+                                    alignSelf: "center"
+                                }}
+                            /> :
+                            <button
+                                onClick={() => SubmitForm()}
+                                style={{
+                                    border: "none",
+                                    backgroundColor: colors.logoPink,
+                                    padding: 10,
+                                    fontFamily: "BalsamiqSans-Regular",
+                                    fontSize: 18,
+                                    color: colors.white,
+                                    width: 200,
+                                    borderRadius: 8
+                                }}>
+                                Submit
+                            </button>
+                    }
                 </div>
                 <div style={{
                     display: "flex",

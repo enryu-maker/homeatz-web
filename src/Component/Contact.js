@@ -6,6 +6,7 @@ import { useForm, Controller } from 'react-hook-form';
 import Header from './Header'
 import useMediaQuery from '../Constants/useMediaQuery'
 import { Helmet } from 'react-helmet'
+import { TailSpin } from 'react-loader-spinner';
 export default function Contact() {
     const { handleSubmit, control, formState: { errors }, } = useForm();
     const mobile = useMediaQuery('(max-width: 768px)');
@@ -20,7 +21,7 @@ export default function Contact() {
     async function SubmitForm() {
         setLoading(true)
         await handleSubmit((data) => {
-             axios.post('https://api-nerdtech.homeatz.in/submitfeedback/', {
+            axios.post('https://api-nerdtech.homeatz.in/submitfeedback/', {
                 name: data.name,
                 email: data.email,
                 phone: data.phone,
@@ -51,7 +52,7 @@ export default function Contact() {
                 <title>Contact Homeatz</title>
                 <meta name="description" content="Have questions, feedback, or need assistance? Contact Homeatz. We're here to help you." />
             </Helmet>
-            <Header/>
+            <Header />
             <div style={{
                 display: "flex",
                 backgroundColor: colors.lightPink,
@@ -72,19 +73,19 @@ export default function Contact() {
             </div>
             <div style={{
                 display: "flex",
-                flexDirection:mobile?"column":"row",
+                flexDirection: mobile ? "column" : "row",
                 width: "90vw",
                 justifyContent: "space-evenly",
                 alignItems: "center",
                 alignSelf: "center",
-                marginTop:"2vh"
+                marginTop: "2vh"
             }}>
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
                     marginTop: 20,
                     height: "50vh",
-                    width:mobile?"90vw": "50vw",
+                    width: mobile ? "90vw" : "50vw",
                     justifyContent: "space-evenly",
                     alignItems: "flex-start"
                 }}>
@@ -104,7 +105,7 @@ export default function Contact() {
                                 <input
                                     style={{
                                         height: 35,
-                                        width:mobile?"90%": "40vw",
+                                        width: mobile ? "90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -143,7 +144,7 @@ export default function Contact() {
                                 <input
                                     style={{
                                         height: 35,
-                                        width:mobile?"90%": "40vw",
+                                        width: mobile ? "90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -181,7 +182,7 @@ export default function Contact() {
                                 <input
                                     style={{
                                         height: 35,
-                                        width:mobile?"90%": "40vw",
+                                        width: mobile ? "90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -218,9 +219,9 @@ export default function Contact() {
                             <>
                                 <textarea
                                     style={{
-                                        height:mobile?80: 100,
-                                        marginBlock:mobile? 10 : 0,
-                                        width:mobile?"90%" : "40vw",
+                                        height: mobile ? 80 : 100,
+                                        marginBlock: mobile ? 10 : 0,
+                                        width: mobile ? "90%" : "40vw",
                                         border: "2px solid lightGray",
                                         borderRadius: 6,
                                         fontFamily: "BalsamiqSans-Regular",
@@ -242,25 +243,36 @@ export default function Contact() {
                             </>
                         )}
                     />
-                    <button
-                        onClick={() => SubmitForm()}
-                        style={{
-                            border: "none",
-                            backgroundColor: colors.iconColor,
-                            padding: 10,
-                            fontFamily: "BalsamiqSans-Regular",
-                            fontSize: 18,
-                            color: colors.white,
-                            width: 200,
-                            borderRadius: 8
-                        }}>
-                        Submit Feedback
-                    </button>
+                    {
+                        loading ?
+                            <TailSpin
+                                color={colors.logoPink}
+                                height={50}
+                                width={50}
+                                style={{
+                                    alignSelf: "center"
+                                }}
+                            /> :
+                            <button
+                                onClick={() => SubmitForm()}
+                                style={{
+                                    border: "none",
+                                    backgroundColor: colors.logoPink,
+                                    padding: 10,
+                                    fontFamily: "BalsamiqSans-Regular",
+                                    fontSize: 18,
+                                    color: colors.white,
+                                    width: 200,
+                                    borderRadius: 8
+                                }}>
+                                Submit
+                            </button>
+                    }
                 </div>
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    height:"50vh",
+                    height: "50vh",
                     justifyContent: "space-evenly",
                     alignItems: "center"
                 }}>
@@ -270,7 +282,7 @@ export default function Contact() {
                         boxShadow: "5px 5px 10px #88888850",
                         padding: 10,
                         borderRadius: 8,
-                        width:mobile?"90vw": "25vw",
+                        width: mobile ? "90vw" : "25vw",
                         height: "18vh",
                         justifyContent: "space-evenly",
                     }}>
