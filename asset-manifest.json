@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.895bfa1c.css",
-    "main.js": "/static/js/main.60c1a62c.js",
+    "main.js": "/static/js/main.10eea271.js",
     "static/js/787.e89ff9fd.chunk.js": "/static/js/787.e89ff9fd.chunk.js",
+    "static/media/app.png": "/static/media/app.3000be3d9223455edfef.png",
     "static/media/BalsamiqSans-Regular.ttf": "/static/media/BalsamiqSans-Regular.600fc42389926ea6ae36.ttf",
-    "static/media/app.png": "/static/media/app.9bb59ec6ebca9ee7dd55.png",
     "static/media/BalsamiqSans-Italic.ttf": "/static/media/BalsamiqSans-Italic.f3330bbaff7898076732.ttf",
     "static/media/BalsamiqSans-Bold.ttf": "/static/media/BalsamiqSans-Bold.3429d40ff49d492bb825.ttf",
     "static/media/playstore.png": "/static/media/playstore.186c030df796ec48cb62.png",
@@ -13,11 +13,11 @@
     "static/media/appstore.png": "/static/media/appstore.9dc088d9161498add556.png",
     "index.html": "/index.html",
     "main.895bfa1c.css.map": "/static/css/main.895bfa1c.css.map",
-    "main.60c1a62c.js.map": "/static/js/main.60c1a62c.js.map",
+    "main.10eea271.js.map": "/static/js/main.10eea271.js.map",
     "787.e89ff9fd.chunk.js.map": "/static/js/787.e89ff9fd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.895bfa1c.css",
-    "static/js/main.60c1a62c.js"
+    "static/js/main.10eea271.js"
   ]
 }
