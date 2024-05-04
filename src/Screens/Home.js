@@ -29,7 +29,7 @@ export default function Home() {
             backgroundColor: "#BD1461",
             borderTopLeftRadius: 40,
             borderBottomRightRadius: 40,
-            height: mobile?"14vh":"15vh",
+            height: mobile ? "14vh" : "15vh",
             justifyContent: "center",
             alignItems: "center",
             // paddingHorizontal: 15,
@@ -39,7 +39,7 @@ export default function Home() {
           <p
             style={{
               color: "#fff",
-              fontSize:mobile?50 : 65, // 4.4 equivalent to 32
+              fontSize: mobile ? 50 : 65, // 4.4 equivalent to 32
               textAlign: "center",
               fontFamily: "LEMONMILK-MEDIUM",
               letterSpacing: 1,
@@ -74,7 +74,7 @@ export default function Home() {
             textAlign: "center",
             fontFamily: "BalsamiqSans-Bold",
             color: "#CBB26A",
-            paddingBlock:20,
+            paddingBlock: 20,
             cursor: "pointer",
           }}
         >
@@ -110,8 +110,8 @@ export default function Home() {
           justifyContent: "space-evenly",
           alignItems: mobile ? "center" : "flex-start",
           width: mobile ? "100%" : "45%",
-          height: "40vh",
-          paddingBlock:mobile?40 : 0,
+          // height: "40vh",
+          paddingBlock: mobile ? 40 : 0,
         }}>
           <p style={{
             marginBlock: 0,
@@ -121,62 +121,41 @@ export default function Home() {
             fontFamily: "BalsamiqSans-Bold",
             marginRight: 10,
           }}>
-            Get the HOMEATZ App
+            HOMEATZ APP
           </p>
           <p style={{
             marginBlock: 0,
             color: colors.darkGrey,
             fontSize: 18,
-            textAlign: 'center',
+            textAlign: 'justify',
             fontFamily: "BalsamiqSans-Regular",
             marginRight: 10,
           }}>
-            We will send you a link, open it on your phone to download the app
+            At Homeatz, we blend innovation with tradition to revolutionize the way you experience home-cooked meals. Our passion lies in creating culinary solutions that bring the essence of homemade goodness right to your kitchen.
+            <br />
+            <br />
+
+            Founded on the belief that nothing can replace the warmth and flavor of ghar ka khana, Homeatz is committed to crafting cutting-edge food technology that simplifies cooking without compromising on taste or nutrition.
+            <br />
+            <br />
+
+            From smart kitchen appliances to intuitive cooking aids, each Homeatz product is designed to empower you to create delicious dishes with ease and efficiency. Our tagline,<span style={{
+              color: colors.logoPink,
+            fontFamily: "BalsamiqSans-Bold",
+
+            }}> "Swad se bhara, pyaar se bana, ghar ka khana, ghar mai hi!"</span> encapsulates our dedication to delivering authentic flavors, made with love, right in the comfort of your home.
+            <br />
+            <br />
+
+            Join us on a journey where culinary tradition meets modern convenience, making every mealtime a celebration of home. Welcome to Homeatz – where home-cooked goodness knows no bounds.
           </p>
-          <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: 20,
-            width: '80%',
-            marginLeft: 10,
-          }}>
-            <input
-              style={{
-                width: '80%',
-                height: 45,
-                border: "1px solid #d0d0d0",
-                outline: 'none',
-                fontSize: 16,
-                textAlign: 'left',
-                fontFamily: "BalsamiqSans-Regular",
-                borderRadius: 8,
-                paddingLeft: 10,
-              }}
-              placeholder='Email Address'
-            />
-            <p style={{
-              marginBlock: 0,
-              color: colors.white,
-              fontSize: 18,
-              textAlign: 'center',
-              fontFamily: "BalsamiqSans-Regular",
-              marginLeft: 10,
-              backgroundColor: colors.iconColor,
-              padding: 12,
-              borderRadius: 8,
-            }}>
-              Share
-            </p>
-          </div>
           <p style={{
             marginBlock: 0,
-            color: "GrayText",
-            fontSize: 18,
+            color: "black",
+            fontSize: 24,
             textAlign: 'left',
-            fontFamily: "BalsamiqSans-Regular",
-            marginLeft: 10,
+            fontFamily: "BalsamiqSans-Bold",
+            // marginLeft: 10,
             marginTop: 20,
           }}>
             Download app from
@@ -189,18 +168,21 @@ export default function Home() {
               alignItems: 'center',
               marginTop: 20,
             }}>
-              <div style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: "ButtonText",
-                height: 40,
-                paddingInline: 10,
-                borderRadius: 8,
-                marginInline: 20,
-                // width: 100
-              }}>
+              <a
+                href='https://play.google.com/store/apps/details?id=com.eatzapp'
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: "ButtonText",
+                  textDecoration: "none",
+                  height: 40,
+                  paddingInline: 10,
+                  borderRadius: 8,
+                  marginInline: 20,
+                  // width: 100
+                }}>
                 <img src={images.playstore} alt="playstore" style={{ width: 30, height: 30 }} />
                 <div style={{
                   display: 'flex',
@@ -229,18 +211,21 @@ export default function Home() {
                     Playstore
                   </p>
                 </div>
-              </div>
-              <div style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: "ButtonText",
-                height: 40,
-                paddingInline: 10,
-                borderRadius: 8,
-                // width: 100
-              }}>
+              </a>
+              <a
+                href='https://apps.apple.com/in/app/homeatz-global/id6499072490'
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: "ButtonText",
+                  textDecoration: "none",
+                  height: 40,
+                  paddingInline: 10,
+                  borderRadius: 8,
+                  // width: 100
+                }}>
                 <img src={images.appstore} alt="playstore" style={{ width: 30, height: 30 }} />
                 <div style={{
                   display: 'flex',
@@ -269,7 +254,7 @@ export default function Home() {
                     Appstore
                   </p>
                 </div>
-              </div>
+              </a>
             </div>
           </LazyLoadComponent>
         </div>

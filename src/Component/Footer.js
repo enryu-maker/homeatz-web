@@ -1,6 +1,6 @@
 import React from 'react'
 import { colors } from '../Assets/theme'
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import { images } from '../Assets/image'
 import { LazyLoadComponent } from 'react-lazy-load-image-component'
@@ -185,7 +185,15 @@ export default function Footer() {
                         justifyContent: 'space-evenly',
                         alignItems: 'center',
                         width: '100%',
+                        wordSpacing:10
                     }}>
+                        <FaYoutube
+                        style={{
+                            cursor: 'pointer',
+                        }}
+                        size={20} color={colors.darkGrey}
+                        onClick={() => window.open('www.youtube.com/@HOMEATZ.GLOBAL', '_blank')}
+                        />
                         <FaFacebook 
                         style={{
                             cursor: 'pointer',
@@ -202,13 +210,13 @@ export default function Footer() {
                         style={{
                             cursor: 'pointer',
                         }}
-                        onClick={() => window.open('https://twitter.com/homeatzindia', '_blank')}
+                        onClick={() => window.open('https://twitter.com/HomeatzIn', '_blank')}
                          size={20} color={colors.darkGrey} />
                         <FaLinkedin
                         style={{
                             cursor: 'pointer',
                         }}
-                        onClick={() => window.open('https://www.linkedin.com/company/homeatzofficial/', '_blank')}
+                        onClick={() => window.open('https://www.linkedin.com/company/74707582/admin/feed/posts/', '_blank')}
                         size={20} color={colors.darkGrey} />
                     </div>
                 </div>
@@ -233,19 +241,23 @@ export default function Footer() {
                             justifyContent: 'center',
                             alignItems: 'center',
                         }}>
-                            <div style={{
+                            <a 
+                            href='https://apps.apple.com/in/app/homeatz-global/id6499072490'
+                            style={{
                                 display: 'flex',
                                 flexDirection: 'row',
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 backgroundColor: "ButtonText",
+                                textDecoration:"none",
                                 paddingInline: 7,
                                 height: 40,
                                 borderRadius: 8,
                                 marginBlockEnd: 10,
                                 // width: 100
                             }}>
-                                <img src={images.playstore} alt="playstore" style={{ width: 30, height: 30 }} />
+                                <img
+                                src={images.playstore} alt="playstore" style={{ width: 30, height: 30 }} />
                                 <div style={{
                                     display: 'flex',
                                     flexDirection: 'column',
@@ -273,13 +285,16 @@ export default function Footer() {
                                         Playstore
                                     </p>
                                 </div>
-                            </div>
-                            <div style={{
+                            </a>
+                            <a 
+                            href='https://play.google.com/store/apps/details?id=com.eatzapp'
+                            style={{
                                 display: 'flex',
                                 flexDirection: 'row',
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 backgroundColor: "ButtonText",
+                                textDecoration:"none",
                                 height: 40,
                                 paddingInline: 7,
                                 borderRadius: 8,
@@ -313,7 +328,7 @@ export default function Footer() {
                                         Appstore
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </LazyLoadComponent>
                 </div>
@@ -337,7 +352,7 @@ export default function Footer() {
                 src={images.NT}
                 alt="NT"
                 style={{
-                    width:mobile?"100vw":"50vw",
+                    width:mobile?"100vw":"40vw",
                     cursor: 'pointer',
                 }}
                 />
