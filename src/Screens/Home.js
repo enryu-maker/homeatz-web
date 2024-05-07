@@ -141,7 +141,7 @@ export default function Home() {
 
             From smart kitchen appliances to intuitive cooking aids, each Homeatz product is designed to empower you to create delicious dishes with ease and efficiency. Our tagline,<span style={{
               color: colors.logoPink,
-            fontFamily: "BalsamiqSans-Bold",
+              fontFamily: "BalsamiqSans-Bold",
 
             }}> "Swad se bhara, pyaar se bana, ghar ka khana, ghar mai hi!"</span> encapsulates our dedication to delivering authentic flavors, made with love, right in the comfort of your home.
             <br />
@@ -258,6 +258,47 @@ export default function Home() {
             </div>
           </LazyLoadComponent>
         </div>
+
+      </div>
+      <div style={{
+        display: "flex",
+        backgroundColor: "black",
+        height: "60vh",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column"
+      }}>
+        <p style={{
+          marginBlock: 0,
+          color: colors.logoPink,
+          fontSize: mobile ? 30 : 20,
+          textAlign: 'center',
+          fontFamily: "BalsamiqSans-Bold",
+          marginRight: 10,
+        }}>
+          SEE HOW OUR APP WORKS
+        </p>
+        <p style={{
+          marginBlock: 0,
+          color: colors.white,
+          fontSize: 35,
+          textAlign: 'center',
+          fontFamily: "BalsamiqSans-Regular",
+          marginRight: 10,
+        }}>
+          We love what we do, check out <br/>
+          some of our Tutorials
+        </p>
+        <div style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          width:"88%",
+          alignItems: "center",
+        }}>
+          <iframe width="320" height="192" src="https://www.youtube.com/embed/5MzoNtUljm0?si=eOI23rEabHN0VnMu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="320" height="192" src="https://www.youtube.com/embed/vwhH_GXiL0w?si=zC6ZdwqoT9wisxLz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
       </div>
       <Footer />
     </>
