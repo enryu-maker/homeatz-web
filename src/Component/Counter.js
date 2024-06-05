@@ -22,7 +22,7 @@ const Counter = () => {
                                 <h1 className="text-dark ms-5 ps-3">
                                     <span className="counter-value">
                                         {counterOn && (
-                                            <CountUp start={0} end={50000} duration={2} delay={0} />
+                                            <CountUp start={0} end={52243} duration={2} delay={0} />
                                         )}
                                     </span>
                                     <span style={{ fontSize: "20px" }}>+</span>

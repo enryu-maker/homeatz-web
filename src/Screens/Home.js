@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { LazyLoadComponent } from 'react-lazy-load-image-component'
 import useMediaQuery from '../Constants/useMediaQuery'
@@ -6,6 +7,7 @@ import { colors } from '../Assets/theme';
 import Footer from '../Component/Footer';
 import { Helmet } from "react-helmet";
 import Counter from '../Component/Counter';
+
 export default function Home() {
   const mobile = useMediaQuery('(max-width: 768px)');
 
@@ -33,14 +35,13 @@ export default function Home() {
             height: mobile ? "14vh" : "15vh",
             justifyContent: "center",
             alignItems: "center",
-            // paddingHorizontal: 15,
             width: mobile ? "90%" : "30%",
           }}
         >
           <p
             style={{
               color: "#fff",
-              fontSize: mobile ? 50 : 65, // 4.4 equivalent to 32
+              fontSize: mobile ? 50 : 65,
               textAlign: "center",
               fontFamily: "LEMONMILK-MEDIUM",
               letterSpacing: 1,
@@ -51,7 +52,7 @@ export default function Home() {
         </div>
         <p
           style={{
-            fontSize: 24, // 1.9 equivalent to 14
+            fontSize: 24,
             textAlign: "center",
             fontFamily: "BalsamiqSans-Bold",
             color: "#CBB26A",
@@ -71,7 +72,7 @@ export default function Home() {
             backgroundColor: "transparent",
             position: "absolute",
             bottom: 0,
-            fontSize: 22, // 1.9 equivalent to 14
+            fontSize: 22,
             textAlign: "center",
             fontFamily: "BalsamiqSans-Bold",
             color: "#CBB26A",
@@ -112,7 +113,6 @@ export default function Home() {
           justifyContent: "space-evenly",
           alignItems: mobile ? "center" : "flex-start",
           width: mobile ? "100%" : "45%",
-          // height: "40vh",
           paddingBlock: mobile ? 40 : 0,
         }}>
           <p style={{
@@ -157,7 +157,6 @@ export default function Home() {
             fontSize: 24,
             textAlign: 'left',
             fontFamily: "BalsamiqSans-Bold",
-            // marginLeft: 10,
             marginTop: 20,
           }}>
             Download app from
@@ -183,7 +182,6 @@ export default function Home() {
                   paddingInline: 10,
                   borderRadius: 8,
                   marginInline: 20,
-                  // width: 100
                 }}>
                 <img src={images.playstore} alt="playstore" style={{ width: 30, height: 30 }} />
                 <div style={{
@@ -226,7 +224,6 @@ export default function Home() {
                   height: 40,
                   paddingInline: 10,
                   borderRadius: 8,
-                  // width: 100
                 }}>
                 <img src={images.appstore} alt="playstore" style={{ width: 30, height: 30 }} />
                 <div style={{
@@ -260,20 +257,20 @@ export default function Home() {
             </div>
           </LazyLoadComponent>
         </div>
-
       </div>
       <div style={{
         display: "flex",
         backgroundColor: "black",
-        height: "60vh",
+        height: mobile ? "auto" : "60vh",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column"
+        flexDirection: "column",
+        padding: mobile ? 20 : 0,
       }}>
         <p style={{
           marginBlock: 0,
           color: colors.logoPink,
-          fontSize: mobile ? 30 : 20,
+          fontSize: mobile ? 20 : 30,
           textAlign: 'center',
           fontFamily: "BalsamiqSans-Bold",
           marginRight: 10,
@@ -283,26 +280,28 @@ export default function Home() {
         <p style={{
           marginBlock: 0,
           color: colors.white,
-          fontSize: 35,
+          fontSize: mobile ? 25 : 35,
           textAlign: 'center',
           fontFamily: "BalsamiqSans-Regular",
           marginRight: 10,
         }}>
-          We love what we do, check out <br/>
+          We love what we do, check out <br />
           some of our Tutorials
         </p>
         <div style={{
           display: "flex",
+          flexDirection: mobile ? "column" : "row",
           justifyContent: "space-evenly",
-          width:"88%",
+          width: mobile ? "100%" : "88%",
           alignItems: "center",
+          marginTop: mobile ? 20 : 0,
         }}>
-          <iframe width="320" height="192" src="https://www.youtube.com/embed/5MzoNtUljm0?si=eOI23rEabHN0VnMu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          <iframe width="320" height="192" src="https://www.youtube.com/embed/vwhH_GXiL0w?si=zC6ZdwqoT9wisxLz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="320" height="192" src="https://www.youtube.com/embed/5MzoNtUljm0?si=eOI23rEabHN0VnMu" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+          <iframe width="320" height="192" src="https://www.youtube.com/embed/vwhH_GXiL0w?si=zC6ZdwqoT9wisxLz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
-
       </div>
       <Footer />
     </>
   )
 }
+
