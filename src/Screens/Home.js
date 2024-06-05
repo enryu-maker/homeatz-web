@@ -5,6 +5,7 @@ import { images } from '../Assets/image';
 import { colors } from '../Assets/theme';
 import Footer from '../Component/Footer';
 import { Helmet } from "react-helmet";
+import Counter from '../Component/Counter';
 export default function Home() {
   const mobile = useMediaQuery('(max-width: 768px)');
 
@@ -78,6 +79,7 @@ export default function Home() {
             cursor: "pointer",
           }}
         >
+          <Counter/>
           Download the app now!
         </button>
       </div>

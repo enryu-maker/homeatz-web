@@ -9,6 +9,7 @@ import About from './Component/About'
 import Refund from './Component/Refund'
 import Shipping from './Component/Shipping'
 import { ColorRing } from 'react-loader-spinner'
+import Counter from '../src/Component/Counter'
 
 export default function App() {
   const [loading, setLoading] = React.useState(true)
@@ -47,6 +48,8 @@ export default function App() {
         <Route path="/refund" element={<Refund />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/terms-and-conditions" element={<Terms />} />
+        <Route path="/counters" element={<Counter />} />
+
       </Routes>
     )
 }
