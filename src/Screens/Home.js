@@ -29,13 +29,15 @@ export default function Home() {
         <div
           style={{
             display: "flex",
-            backgroundColor: "#BD1461",
+            // backgroundColor: "#BD1461",
             borderTopLeftRadius: 40,
             borderBottomRightRadius: 40,
-            height: mobile ? "14vh" : "15vh",
+            Height: mobile ? "15vh" : "15vh",
+            maxHeight: mobile ? "15vh" : "15vh",
             justifyContent: "center",
             alignItems: "center",
-            width: mobile ? "90%" : "30%",
+            width: mobile ? "90%" : "45%",
+            minWidth: mobile ? "100%" : "45%",
           }}
         >
           <p
@@ -45,6 +47,11 @@ export default function Home() {
               textAlign: "center",
               fontFamily: "LEMONMILK-MEDIUM",
               letterSpacing: 1,
+              backgroundColor: "#BD1461",
+              borderTopLeftRadius: 40,
+              borderBottomRightRadius: 40,
+              padding:10,
+              paddingInline:30,
             }}
           >
             HOMEATZ
@@ -92,6 +99,8 @@ export default function Home() {
           justifyContent: "space-evenly",
           alignItems: "center",
           width: "100%",
+          height:"100%",
+          minHeight: "100%",
           alignSelf: "center",
           backgroundColor: colors.white,
         }}>
@@ -102,8 +111,10 @@ export default function Home() {
                 alt="Group-1"
                 style={{
                   width: "50%",
-                  height: "50%",
-                  padding: 20,
+                  height: "100%",
+                  minHeight: "100%",
+                  maxHeight: "100%",
+                  marginLeft: -40
                 }} />
             </LazyLoadComponent>
         }
@@ -113,7 +124,7 @@ export default function Home() {
           justifyContent: "space-evenly",
           alignItems: mobile ? "center" : "flex-start",
           width: mobile ? "100%" : "45%",
-          paddingBlock: mobile ? 40 : 0,
+          paddingBlock: mobile ? 40 : 10,
         }}>
           <p style={{
             marginBlock: 0,
