@@ -37,7 +37,7 @@ export default function Footer() {
                         fontFamily: "LEMONMILK-Bold",
                         textDecoration: 'none',
                     }}>
-                    HOMEATZ.
+                    HOMEATZ GLOBAL
                 </Link>
             </div>
             <div style={{
@@ -45,9 +45,9 @@ export default function Footer() {
                 flexDirection: mobile ? "column" : 'row',
                 justifyContent: mobile ? 'flex-start' : 'space-evenly',
                 alignItems: 'flex-start',
-                // width: mobile ? "65vw" : '70vw',
-                flexWrap: "wrap",
-                height: mobile ? "50vh" : "auto",
+                width: mobile ? "88%" : '70vw',
+                // flexWrap: "wrap",
+                // height: mobile ? "50vh" : "auto",
                 paddingBlockEnd: 20,
             }}>
                 <div style={{
