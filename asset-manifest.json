@@ -1,23 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.895bfa1c.css",
-    "main.js": "/static/js/main.f4fc5298.js",
+    "main.js": "/static/js/main.1116310f.js",
     "static/js/787.e89ff9fd.chunk.js": "/static/js/787.e89ff9fd.chunk.js",
     "static/media/app.png": "/static/media/app.3000be3d9223455edfef.png",
     "static/media/BalsamiqSans-Regular.ttf": "/static/media/BalsamiqSans-Regular.600fc42389926ea6ae36.ttf",
     "static/media/BalsamiqSans-Italic.ttf": "/static/media/BalsamiqSans-Italic.f3330bbaff7898076732.ttf",
     "static/media/BalsamiqSans-Bold.ttf": "/static/media/BalsamiqSans-Bold.3429d40ff49d492bb825.ttf",
+    "static/media/3.jpeg": "/static/media/3.51e11755d6f6f73300db.jpeg",
+    "static/media/1.jpeg": "/static/media/1.0d8c78b24d67a0d9c7ce.jpeg",
+    "static/media/2.jpeg": "/static/media/2.f8f689becaaccc11a518.jpeg",
     "static/media/playstore.png": "/static/media/playstore.186c030df796ec48cb62.png",
     "static/media/LEMONMILK-Bold.otf": "/static/media/LEMONMILK-Bold.ac2b6389ba01ca1f431e.otf",
     "static/media/LEMONMILK-Medium.otf": "/static/media/LEMONMILK-Medium.3d615d9795b5607c2478.otf",
     "static/media/appstore.png": "/static/media/appstore.9dc088d9161498add556.png",
     "index.html": "/index.html",
     "main.895bfa1c.css.map": "/static/css/main.895bfa1c.css.map",
-    "main.f4fc5298.js.map": "/static/js/main.f4fc5298.js.map",
+    "main.1116310f.js.map": "/static/js/main.1116310f.js.map",
     "787.e89ff9fd.chunk.js.map": "/static/js/787.e89ff9fd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.895bfa1c.css",
-    "static/js/main.f4fc5298.js"
+    "static/js/main.1116310f.js"
   ]
 }
