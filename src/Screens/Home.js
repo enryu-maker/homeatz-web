@@ -82,12 +82,12 @@ export default function Home() {
           </a> */}
 
         <button
-          onClick={() => {
-            window.scrollTo({
-              top: document.getElementById("section1").offsetTop,
-              behavior: "smooth",
-            });
-          }}
+          // onClick={() => {
+          //   window.scrollTo({
+          //     top: document.getElementById("section1").offsetTop,
+          //     behavior: "smooth",
+          //   });
+          // }}
           style={{
             border: "none",
             backgroundColor: "transparent",
@@ -101,9 +101,20 @@ export default function Home() {
             cursor: "pointer",
           }}
         >
-          
+
           Download the app now!
+          <div style={{
+            marginTop:20
+          }} >
+            <img onClick={()=>{
+              window.open("https://apps.apple.com/in/app/homeatz-global/id6499072490")
+            }} src={images.appstore} alt="playstore" style={{ width: 30, height: 30 }} />
+            <img onClick={()=>{
+              window.open("https://play.google.com/store/apps/details?id=com.eatzapp")
+            }} src={images.playstore} alt="playstore" style={{ width: 30, height: 30, marginLeft:20 }} />
+          </div>
         </button>
+
       </div>
       <div
         id={"section1"}
@@ -328,10 +339,36 @@ export default function Home() {
           justifyContent: "space-evenly",
           width: mobile ? "100%" : "88%",
           alignItems: "center",
-          marginTop: mobile ? 20 : 0,
+          marginTop: mobile ? 20 : 10,
+
         }}>
-          <iframe width="320" height="192" src="https://www.youtube.com/embed/5MzoNtUljm0?si=eOI23rEabHN0VnMu" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-          <iframe width="320" height="192" src="https://www.youtube.com/embed/vwhH_GXiL0w?si=zC6ZdwqoT9wisxLz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <div>
+            <p style={{
+              marginBlock: 0,
+              color: colors.white,
+              fontSize: mobile ? 25 : 35,
+              textAlign: 'center',
+              fontFamily: "BalsamiqSans-Regular",
+              // marginRight: 10,
+            }}>
+              1. User Manual
+            </p>
+            <iframe width="320" height="192" src="https://www.youtube.com/embed/5MzoNtUljm0?si=eOI23rEabHN0VnMu" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+          </div>
+          <div>
+            <p style={{
+              marginBlock: 0,
+              color: colors.white,
+              fontSize: mobile ? 25 : 35,
+              textAlign: 'center',
+              fontFamily: "BalsamiqSans-Regular",
+              // marginRight: 10,
+            }}>
+              2. Chef Manual
+            </p>
+            <iframe width="320" height="192" src="https://www.youtube.com/embed/vwhH_GXiL0w?si=zC6ZdwqoT9wisxLz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
+          </div>
         </div>
       </div>
       <Footer />
