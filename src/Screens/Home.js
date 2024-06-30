@@ -50,8 +50,8 @@ export default function Home() {
               backgroundColor: "#BD1461",
               borderTopLeftRadius: 40,
               borderBottomRightRadius: 40,
-              padding:10,
-              paddingInline:30,
+              padding: 10,
+              paddingInline: 30,
             }}
           >
             HOMEATZ
@@ -67,6 +67,20 @@ export default function Home() {
         >
           Home Food By Home Chefs
         </p>
+        <p
+          style={{
+            fontSize: 24,
+            textAlign: "center",
+            fontFamily: "BalsamiqSans-Bold",
+            color: "#CBB26A",
+          }}
+        >
+          Visitor Count
+        </p>
+        <a href="https://www.freevisitorcounters.com/en/home/stats/id/1198229" target="_blank">
+            <img src="https://www.freevisitorcounters.com/en/counter/render/1198229/t/5" border="0" class="counterimg" />
+          </a>
+
         <button
           onClick={() => {
             window.scrollTo({
@@ -87,7 +101,7 @@ export default function Home() {
             cursor: "pointer",
           }}
         >
-          <Counter/>
+          
           Download the app now!
         </button>
       </div>
@@ -99,7 +113,7 @@ export default function Home() {
           justifyContent: "space-evenly",
           alignItems: "center",
           width: "100%",
-          height:"100%",
+          height: "100%",
           minHeight: "100%",
           alignSelf: "center",
           backgroundColor: colors.white,
@@ -269,6 +283,15 @@ export default function Home() {
           </LazyLoadComponent>
         </div>
       </div>
+      <img style={{
+        width: "100vw"
+      }} src={images[1]} />
+      <img style={{
+        width: "100vw"
+      }} src={images[2]} />
+      <img style={{
+        width: "100vw"
+      }} src={images[3]} />
       <div style={{
         display: "flex",
         backgroundColor: "black",

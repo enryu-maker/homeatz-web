@@ -26,17 +26,17 @@ export default function Footer() {
                 width: mobile ? "95vw" : '70vw',
                 height: 70,
             }}>
-                <Link 
-                to={'/'}
-                style={{
-                    marginBlock: 0,
-                    color: colors.iconColor,
-                    fontSize: 25,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                    fontFamily: "LEMONMILK-Bold",
-                    textDecoration: 'none',
-                }}>
+                <Link
+                    to={'/'}
+                    style={{
+                        marginBlock: 0,
+                        color: colors.iconColor,
+                        fontSize: 25,
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                        fontFamily: "LEMONMILK-Bold",
+                        textDecoration: 'none',
+                    }}>
                     HOMEATZ.
                 </Link>
             </div>
@@ -44,10 +44,10 @@ export default function Footer() {
                 display: 'flex',
                 flexDirection: mobile ? "column" : 'row',
                 justifyContent: mobile ? 'flex-start' : 'space-evenly',
-                alignItems:'flex-start',
+                alignItems: 'flex-start',
                 width: mobile ? "95vw" : '70vw',
-                flexWrap:"wrap",
-                height:mobile? "50vh":"auto",
+                flexWrap: "wrap",
+                height: mobile ? "50vh" : "auto",
                 paddingBlockEnd: 20,
             }}>
                 <div style={{
@@ -185,39 +185,39 @@ export default function Footer() {
                         justifyContent: 'space-evenly',
                         alignItems: 'center',
                         width: '100%',
-                        wordSpacing:10
+                        wordSpacing: 10
                     }}>
                         <FaYoutube
-                        style={{
-                            cursor: 'pointer',
-                        }}
-                        size={20} color={colors.darkGrey}
-                        onClick={() => window.open('www.youtube.com/@HOMEATZ.GLOBAL', '_blank')}
+                            style={{
+                                cursor: 'pointer',
+                            }}
+                            size={20} color={colors.darkGrey}
+                            onClick={() => window.open('www.youtube.com/@HOMEATZ.GLOBAL', '_blank')}
                         />
-                        <FaFacebook 
-                        style={{
-                            cursor: 'pointer',
-                        }}
-                        onClick={() => window.open('https://www.facebook.com/homeatz', '_blank')}
-                        size={20} color={colors.darkGrey} />
+                        <FaFacebook
+                            style={{
+                                cursor: 'pointer',
+                            }}
+                            onClick={() => window.open('https://www.facebook.com/homeatz', '_blank')}
+                            size={20} color={colors.darkGrey} />
                         <FaInstagram
-                        style={{
-                            cursor: 'pointer',
-                        }}
-                        onClick={() => window.open('https://www.instagram.com/homeatz/', '_blank')}
-                        size={20} color={colors.darkGrey} />
+                            style={{
+                                cursor: 'pointer',
+                            }}
+                            onClick={() => window.open('https://www.instagram.com/homeatz/', '_blank')}
+                            size={20} color={colors.darkGrey} />
                         <FaXTwitter
-                        style={{
-                            cursor: 'pointer',
-                        }}
-                        onClick={() => window.open('https://twitter.com/HomeatzIn', '_blank')}
-                         size={20} color={colors.darkGrey} />
+                            style={{
+                                cursor: 'pointer',
+                            }}
+                            onClick={() => window.open('https://twitter.com/HomeatzIn', '_blank')}
+                            size={20} color={colors.darkGrey} />
                         <FaLinkedin
-                        style={{
-                            cursor: 'pointer',
-                        }}
-                        onClick={() => window.open('https://www.linkedin.com/company/74707582/admin/feed/posts/', '_blank')}
-                        size={20} color={colors.darkGrey} />
+                            style={{
+                                cursor: 'pointer',
+                            }}
+                            onClick={() => window.open('https://www.linkedin.com/company/74707582/admin/feed/posts/', '_blank')}
+                            size={20} color={colors.darkGrey} />
                     </div>
                 </div>
                 <div style={{
@@ -232,7 +232,7 @@ export default function Footer() {
                         textAlign: 'center',
                         fontFamily: "LEMONMILK-Bold",
                     }}>
-                       Download
+                        Download
                     </p>
                     <LazyLoadComponent>
                         <div style={{
@@ -241,66 +241,23 @@ export default function Footer() {
                             justifyContent: 'center',
                             alignItems: 'center',
                         }}>
-                            <a 
-                            href='https://apps.apple.com/in/app/homeatz-global/id6499072490'
-                            style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: "ButtonText",
-                                textDecoration:"none",
-                                paddingInline: 7,
-                                height: 40,
-                                borderRadius: 8,
-                                marginBlockEnd: 10,
-                                // width: 100
-                            }}>
-                                <img
-                                src={images.playstore} alt="playstore" style={{ width: 30, height: 30 }} />
-                                <div style={{
+                            <a
+                                href='https://apps.apple.com/in/app/homeatz-global/id6499072490'
+                                style={{
                                     display: 'flex',
-                                    flexDirection: 'column',
+                                    flexDirection: 'row',
                                     justifyContent: 'center',
-                                    alignItems: 'flex-start',
+                                    alignItems: 'center',
+                                    backgroundColor: "ButtonText",
+                                    textDecoration: "none",
+                                    paddingInline: 7,
+                                    height: 40,
+                                    borderRadius: 8,
+                                    marginBlockEnd: 10,
+                                    // width: 100
                                 }}>
-                                    <p style={{
-                                        marginBlock: 0,
-                                        color: colors.white,
-                                        fontSize: 12,
-                                        textAlign: 'center',
-                                        fontFamily: "BalsamiqSans-Regular",
-                                        marginLeft: 10,
-                                    }}>
-                                        Get it on
-                                    </p>
-                                    <p style={{
-                                        marginBlock: 0,
-                                        color: colors.white,
-                                        fontSize: 18,
-                                        textAlign: 'center',
-                                        fontFamily: "BalsamiqSans-Regular",
-                                        marginLeft: 10,
-                                    }}>
-                                        Playstore
-                                    </p>
-                                </div>
-                            </a>
-                            <a 
-                            href='https://play.google.com/store/apps/details?id=com.eatzapp'
-                            style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: "ButtonText",
-                                textDecoration:"none",
-                                height: 40,
-                                paddingInline: 7,
-                                borderRadius: 8,
-                                // width: 100
-                            }}>
-                                <img src={images.appstore} alt="playstore" style={{ width: 30, height: 30 }} />
+                                <img
+                                    src={images.appstore} alt="appstore" style={{ width: 30, height: 30 }} />
                                 <div style={{
                                     display: 'flex',
                                     flexDirection: 'column',
@@ -329,6 +286,49 @@ export default function Footer() {
                                     </p>
                                 </div>
                             </a>
+                            <a
+                                href='https://play.google.com/store/apps/details?id=com.eatzapp'
+                                style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    backgroundColor: "ButtonText",
+                                    textDecoration: "none",
+                                    height: 40,
+                                    paddingInline: 7,
+                                    borderRadius: 8,
+                                    // width: 100
+                                }}>
+                                <img src={images.playstore} alt="playstore" style={{ width: 30, height: 30 }} />
+                                <div style={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    alignItems: 'flex-start',
+                                }}>
+                                    <p style={{
+                                        marginBlock: 0,
+                                        color: colors.white,
+                                        fontSize: 12,
+                                        textAlign: 'center',
+                                        fontFamily: "BalsamiqSans-Regular",
+                                        marginLeft: 10,
+                                    }}>
+                                        Get it on
+                                    </p>
+                                    <p style={{
+                                        marginBlock: 0,
+                                        color: colors.white,
+                                        fontSize: 18,
+                                        textAlign: 'center',
+                                        fontFamily: "BalsamiqSans-Regular",
+                                        marginLeft: 10,
+                                    }}>
+                                        Playstore
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </LazyLoadComponent>
                 </div>
@@ -352,10 +352,10 @@ export default function Footer() {
                 src={images.NT}
                 alt="NT"
                 style={{
-                    width:mobile?"100vw":"40vw",
+                    width: mobile ? "100vw" : "40vw",
                     cursor: 'pointer',
                 }}
-                />
+            />
         </div>
     )
 }
