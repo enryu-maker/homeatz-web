@@ -67,7 +67,7 @@ export default function Home() {
         >
           Home Food By Home Chefs
         </p>
-        <p
+        {/* <p
           style={{
             fontSize: 24,
             textAlign: "center",
@@ -79,7 +79,7 @@ export default function Home() {
         </p>
         <a href="https://www.freevisitorcounters.com/en/home/stats/id/1198229" target="_blank">
             <img src="https://www.freevisitorcounters.com/en/counter/render/1198229/t/5" border="0" class="counterimg" />
-          </a>
+          </a> */}
 
         <button
           onClick={() => {

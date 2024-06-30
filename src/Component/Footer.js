@@ -45,7 +45,7 @@ export default function Footer() {
                 flexDirection: mobile ? "column" : 'row',
                 justifyContent: mobile ? 'flex-start' : 'space-evenly',
                 alignItems: 'flex-start',
-                width: mobile ? "95vw" : '70vw',
+                // width: mobile ? "65vw" : '70vw',
                 flexWrap: "wrap",
                 height: mobile ? "50vh" : "auto",
                 paddingBlockEnd: 20,
