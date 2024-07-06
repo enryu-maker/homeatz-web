@@ -18,7 +18,7 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 0);
   }, []);
 
   if (loading) {
@@ -54,7 +54,7 @@ export default function App() {
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/terms-and-conditions" element={<Terms />} />
         <Route path="/counters" element={<Counter />} />
-        <Route path="/chefinfo/9" element={<ChefInfoRedirect />} />
+        {/* <Route path="/chefinfo/1" element={<ChefInfoRedirect />} /> */}
       </Routes>
     );
   }
