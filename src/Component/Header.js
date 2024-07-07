@@ -27,7 +27,7 @@ export default function Header() {
                     fontFamily: "LEMONMILK-Bold",
                     cursor: 'pointer',
                 }}>
-                HOMEATZ
+                HOMEATZ GLOBAL
             </Link>
         </div>
     )
