@@ -11,8 +11,9 @@ import Shipping from "./Component/Shipping";
 import { ColorRing } from "react-loader-spinner";
 import Counter from "../src/Component/Counter";
 import ChefInfoRedirect from "./Component/ChefInfoRedirect";
-import Delete from "./Component/Delete";
+import FoodinfoRedirect from "./Component/FoodinfoRedirect";
 
+import Delete from "./Component/Delete";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -58,6 +59,7 @@ export default function App() {
         <Route path="/counters" element={<Counter />} />
         <Route path="/delete-account" element={<Delete />} />
         <Route path="/chefinfo/:id" element={<ChefInfoRedirect />} />
+        <Route path="/foodinfo/:id" element={<FoodinfoRedirect />} />
       </Routes>
     );
   }
