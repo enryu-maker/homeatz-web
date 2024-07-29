@@ -1,0 +1,12 @@
+[{
+    "relation": [
+        "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+        "namespace": "android_app",
+        "package_name": "com.eatzapp",
+        "sha256_cert_fingerprints": [
+            "AC:BD:7F:86:D8:9A:21:88:99:6E:22:92:1D:55:3C:67:8E:95:99:8F:9F:72:D1:38:AD:55:FF:20:5B:CC:6C:E1"
+        ]
+    }
+}]
